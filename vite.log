@@ -37,3 +37,233 @@
 7:09:59 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
 7:10:04 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
 7:10:09 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
+7:39:56 AM [vite] Pre-transform error: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx: Unexpected token, expected "," (106:58)
+
+  104 |           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105 |             <div>
+> 106 |               <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+      |                                                           ^
+  107 |               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108 |             </div>
+  109 |             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+7:39:57 AM [vite] Pre-transform error: /home/user/webapp/order-management-system/src/pages/Accounting.jsx: Unterminated string constant. (195:59)
+
+  193 |                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.revenue || 0)}</div>
+  194 |               </div>
+> 195 |               <div style={{ fontSize: '13px', opacity: 0.85' }}>売上高合計</div>
+      |                                                            ^
+  196 |             </div>
+  197 |
+  198 |             <div className="summary-card expense-card" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+7:39:57 AM [vite] Internal server error: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx: Unexpected token, expected "," (106:58)
+
+  104 |           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105 |             <div>
+> 106 |               <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+      |                                                           ^
+  107 |               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108 |             </div>
+  109 |             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+  Plugin: vite:react-babel
+  File: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx:106:58
+  104|            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105|              <div>
+  106|                <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+     |                                                            ^
+  107|                <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108|              </div>
+      at constructor (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.parseObjectLike (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11894:14)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11403:23)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseExpression (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4661:31)
+      at JSXParserMixin.jsxParseAttributeValue (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4633:21)
+      at JSXParserMixin.jsxParseAttribute (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4682:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4696:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4691:17)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4715:33)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElement (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+7:39:57 AM [vite] Internal server error: /home/user/webapp/order-management-system/src/pages/Accounting.jsx: Unterminated string constant. (195:59)
+
+  193 |                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.revenue || 0)}</div>
+  194 |               </div>
+> 195 |               <div style={{ fontSize: '13px', opacity: 0.85' }}>売上高合計</div>
+      |                                                            ^
+  196 |             </div>
+  197 |
+  198 |             <div className="summary-card expense-card" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+  Plugin: vite:react-babel
+  File: /home/user/webapp/order-management-system/src/pages/Accounting.jsx:195:59
+  193|                  <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.revenue || 0)}</div>
+  194|                </div>
+  195|                <div style={{ fontSize: '13px', opacity: 0.85' }}>売上高合計</div>
+     |                                                             ^
+  196|              </div>
+  197|  
+      at constructor (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6624:19)
+      at Object.unterminated (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:5689:20)
+      at readStringContents (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:5431:16)
+      at JSXParserMixin.readString (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6523:9)
+      at JSXParserMixin.getTokenFromCode (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6283:14)
+      at JSXParserMixin.getTokenFromCode (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4826:11)
+      at JSXParserMixin.nextToken (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:5807:10)
+      at JSXParserMixin.next (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:5717:10)
+      at JSXParserMixin.parseLiteralAtNode (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11674:10)
+      at JSXParserMixin.parseLiteral (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11679:17)
+      at JSXParserMixin.parseNumericLiteral (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11685:17)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11381:21)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseObjectProperty (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12024:83)
+      at JSXParserMixin.parseObjPropValue (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12052:100)
+      at JSXParserMixin.parsePropertyDefinition (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11989:17)
+      at JSXParserMixin.parseObjectLike (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11904:21)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11403:23)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseExpression (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4661:31)
+      at JSXParserMixin.jsxParseAttributeValue (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4633:21)
+      at JSXParserMixin.jsxParseAttribute (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4682:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4696:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4691:17)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4715:33)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+7:41:02 AM [vite] hmr update /src/pages/Accounting.jsx
+7:41:02 AM [vite] hmr update /src/pages/Accounting.jsx
+7:41:02 AM [vite] Pre-transform error: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx: Unexpected token, expected "," (106:58)
+
+  104 |           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105 |             <div>
+> 106 |               <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+      |                                                           ^
+  107 |               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108 |             </div>
+  109 |             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+7:41:03 AM [vite] Internal server error: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx: Unexpected token, expected "," (106:58)
+
+  104 |           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105 |             <div>
+> 106 |               <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+      |                                                           ^
+  107 |               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108 |             </div>
+  109 |             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+  Plugin: vite:react-babel
+  File: /home/user/webapp/order-management-system/src/pages/Dashboard.jsx:106:58
+  104|            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
+  105|              <div>
+  106|                <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+     |                                                            ^
+  107|                <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+  108|              </div>
+      at constructor (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:367:19)
+      at JSXParserMixin.raise (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6624:19)
+      at JSXParserMixin.unexpected (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6644:16)
+      at JSXParserMixin.expect (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:6924:12)
+      at JSXParserMixin.parseObjectLike (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11894:14)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11403:23)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at JSXParserMixin.parseExpressionBase (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10848:23)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseExpression (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10844:17)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4661:31)
+      at JSXParserMixin.jsxParseAttributeValue (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4633:21)
+      at JSXParserMixin.jsxParseAttribute (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4682:38)
+      at JSXParserMixin.jsxParseOpeningElementAfterName (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4696:28)
+      at JSXParserMixin.jsxParseOpeningElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4691:17)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4715:33)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElementAt (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4727:32)
+      at JSXParserMixin.jsxParseElement (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4778:17)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4788:19)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)
+      at JSXParserMixin.parseMaybeConditional (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10945:23)
+      at JSXParserMixin.parseMaybeAssign (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10895:21)
+      at /home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:39
+      at JSXParserMixin.allowInAnd (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12500:12)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10864:17)
+      at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:12567:17)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11747:28)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11395:23)
+      at JSXParserMixin.parseExprAtom (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:4793:20)
+      at JSXParserMixin.parseExprSubscripts (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11145:23)
+      at JSXParserMixin.parseUpdate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11130:21)
+      at JSXParserMixin.parseMaybeUnary (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:11110:23)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10963:61)
+      at JSXParserMixin.parseExprOps (/home/user/webapp/order-management-system/node_modules/@babel/parser/lib/index.js:10968:23)

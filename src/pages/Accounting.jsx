@@ -192,37 +192,37 @@ export default function Accounting() {
                 <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>収益</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.revenue || 0)}</div>
               </div>
-              <div style={{ fontSize: '13px', opacity: 0.85' }}>売上高合計</div>
+              <div style={{ fontSize: '13px', opacity: 0.85 }}>売上高合計</div>
             </div>
 
             <div className="summary-card expense-card" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
-                <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>費用</div>
+                <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>費用</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.expenses || 0)}</div>
               </div>
-              <div style={{ fontSize: '13px', opacity: 0.85' }}>経費合計</div>
+              <div style={{ fontSize: '13px', opacity: 0.85 }}>経費合計</div>
             </div>
 
             <div className={`summary-card ${(profitLoss.revenue - profitLoss.expenses) >= 0 ? 'profit-card' : 'loss-card'}`}
               style={{ background: (profitLoss.revenue - profitLoss.expenses) >= 0 ? 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' : 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
                 padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
-                <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>純利益</div>
+                <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>純利益</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency((profitLoss.revenue || 0) - (profitLoss.expenses || 0))}</div>
               </div>
-              <div style={{ fontSize: '13px', opacity: 0.85' }}>
+              <div style={{ fontSize: '13px', opacity: 0.85 }}>
                 {(profitLoss.revenue - profitLoss.expenses) >= 0 ? '黒字経営' : '赤字経営'}
               </div>
             </div>
 
             <div className="summary-card rate-card" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
-                <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>利益率</div>
+                <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>利益率</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>
                   {profitLoss.revenue > 0 ? ((profitLoss.revenue - profitLoss.expenses) / profitLoss.revenue * 100).toFixed(1) : 0}%
                 </div>
               </div>
-              <div style={{ fontSize: '13px', opacity: 0.85' }}>売上高利益率</div>
+              <div style={{ fontSize: '13px', opacity: 0.85 }}>売上高利益率</div>
             </div>
           </div>
 
