@@ -103,7 +103,7 @@ export default function Dashboard() {
         <div style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>仕入先</div>
+              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>仕入先</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
             </div>
             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
@@ -116,7 +116,7 @@ export default function Dashboard() {
         <div style={{ background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9', marginBottom: '8px' }}>発注書</div>
+              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>発注書</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalPurchaseOrders}</div>
             </div>
             <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
