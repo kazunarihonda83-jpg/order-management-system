@@ -1,0 +1,39 @@
+
+> order-management-system@1.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 343 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://169.254.0.21:3000/
+7:01:58 AM [vite] hmr update /src/pages/Customers.jsx
+7:01:58 AM [vite] hmr update /src/pages/Customers.jsx
+7:02:46 AM [vite] hmr update /src/pages/Documents.jsx
+7:02:46 AM [vite] hmr update /src/pages/Documents.jsx
+7:03:28 AM [vite] hmr update /src/pages/Suppliers.jsx
+7:03:28 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
+7:06:28 AM [vite] hmr update /src/pages/Dashboard.jsx
+7:06:28 AM [vite] hmr update /src/pages/Dashboard.jsx
+7:08:11 AM [vite] hmr update /src/pages/Accounting.jsx
+7:08:11 AM [vite] hmr update /src/pages/Accounting.jsx
+7:08:21 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:21 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:32 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:32 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:37 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:37 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:46 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:46 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:53 AM [vite] hmr update /src/pages/Documents.jsx
+7:08:53 AM [vite] hmr update /src/pages/Documents.jsx
+7:09:01 AM [vite] hmr update /src/pages/Documents.jsx
+7:09:01 AM [vite] hmr update /src/pages/Documents.jsx
+7:09:15 AM [vite] hmr update /src/pages/Suppliers.jsx
+7:09:22 AM [vite] hmr update /src/pages/Suppliers.jsx
+7:09:28 AM [vite] hmr update /src/pages/Suppliers.jsx
+7:09:33 AM [vite] hmr update /src/pages/Suppliers.jsx
+7:09:51 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
+7:09:59 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
+7:10:04 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
+7:10:09 AM [vite] hmr update /src/pages/PurchaseOrders.jsx
