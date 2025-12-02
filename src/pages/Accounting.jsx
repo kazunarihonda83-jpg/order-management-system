@@ -187,7 +187,7 @@ export default function Accounting() {
         <div>
           {/* サマリーカード */}
           <div className="summary-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-            <div className="summary-card revenue-card" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+            <div className="summary-card revenue-card" style={{ background: '#3498db', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
                 <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>収益</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.revenue || 0)}</div>
@@ -195,7 +195,7 @@ export default function Accounting() {
               <div style={{ fontSize: '13px', opacity: 0.85 }}>売上高合計</div>
             </div>
 
-            <div className="summary-card expense-card" style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+            <div className="summary-card expense-card" style={{ background: '#e74c3c', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
                 <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>費用</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>{formatCurrency(profitLoss.expenses || 0)}</div>
@@ -204,7 +204,7 @@ export default function Accounting() {
             </div>
 
             <div className={`summary-card ${(profitLoss.revenue - profitLoss.expenses) >= 0 ? 'profit-card' : 'loss-card'}`}
-              style={{ background: (profitLoss.revenue - profitLoss.expenses) >= 0 ? 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' : 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+              style={{ background: (profitLoss.revenue - profitLoss.expenses) >= 0 ? '#27ae60' : '#e67e22',
                 padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
                 <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>純利益</div>
@@ -215,7 +215,7 @@ export default function Accounting() {
               </div>
             </div>
 
-            <div className="summary-card rate-card" style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+            <div className="summary-card rate-card" style={{ background: '#95a5a6', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
               <div style={{ marginBottom: '15px' }}>
                 <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>利益率</div>
                 <div style={{ fontSize: '32px', fontWeight: '700' }}>

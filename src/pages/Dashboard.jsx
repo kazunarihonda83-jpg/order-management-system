@@ -74,52 +74,52 @@ export default function Dashboard() {
 
       {/* 統計カード */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#2c3e50', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>顧客数</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalCustomers}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
               <Users size={28} />
             </div>
           </div>
           <div style={{ fontSize: '13px', opacity: 0.85 }}>登録済み顧客</div>
         </div>
 
-        <div style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#34495e', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>書類数</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalDocuments}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
               <FileText size={28} />
             </div>
           </div>
           <div style={{ fontSize: '13px', opacity: 0.85 }}>作成済み書類</div>
         </div>
 
-        <div style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#5a6c7d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>仕入先</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
               <Package size={28} />
             </div>
           </div>
           <div style={{ fontSize: '13px', opacity: 0.85 }}>登録済み仕入先</div>
         </div>
 
-        <div style={{ background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#7f8c8d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>発注書</div>
               <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalPurchaseOrders}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.2)', padding: '12px', borderRadius: '12px' }}>
+            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
               <ShoppingCart size={28} />
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Dashboard() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: 'linear-gradient(135deg, #667eea, #764ba2)', padding: '10px', borderRadius: '10px', color: 'white' }}>
+            <div style={{ background: '#3498db', padding: '10px', borderRadius: '10px', color: 'white' }}>
               <TrendingUp size={24} />
             </div>
             <div>
@@ -145,7 +145,7 @@ export default function Dashboard() {
 
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: 'linear-gradient(135deg, #f093fb, #f5576c)', padding: '10px', borderRadius: '10px', color: 'white' }}>
+            <div style={{ background: '#e74c3c', padding: '10px', borderRadius: '10px', color: 'white' }}>
               <DollarSign size={24} />
             </div>
             <div>
@@ -159,7 +159,7 @@ export default function Dashboard() {
 
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: 'linear-gradient(135deg, #43e97b, #38f9d7)', padding: '10px', borderRadius: '10px', color: 'white' }}>
+            <div style={{ background: '#27ae60', padding: '10px', borderRadius: '10px', color: 'white' }}>
               <BarChart3 size={24} />
             </div>
             <div>
