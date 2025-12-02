@@ -74,56 +74,56 @@ export default function Dashboard() {
 
       {/* 統計カード */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ background: '#2c3e50', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', border: '1px solid #e0e0e0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>顧客数</div>
-              <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalCustomers}</div>
+              <div style={{ fontSize: '14px', color: '#757575', marginBottom: '8px' }}>顧客数</div>
+              <div style={{ fontSize: '32px', fontWeight: '700', color: '#212121' }}>{stats.totalCustomers}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
-              <Users size={28} />
+            <div style={{ background: '#f5f5f5', padding: '12px', borderRadius: '12px' }}>
+              <Users size={28} color="#616161" />
             </div>
           </div>
-          <div style={{ fontSize: '13px', opacity: 0.85 }}>登録済み顧客</div>
+          <div style={{ fontSize: '13px', color: '#9e9e9e' }}>登録済み顧客</div>
         </div>
 
-        <div style={{ background: '#34495e', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', border: '1px solid #e0e0e0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>書類数</div>
-              <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalDocuments}</div>
+              <div style={{ fontSize: '14px', color: '#757575', marginBottom: '8px' }}>書類数</div>
+              <div style={{ fontSize: '32px', fontWeight: '700', color: '#212121' }}>{stats.totalDocuments}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
-              <FileText size={28} />
+            <div style={{ background: '#f5f5f5', padding: '12px', borderRadius: '12px' }}>
+              <FileText size={28} color="#616161" />
             </div>
           </div>
-          <div style={{ fontSize: '13px', opacity: 0.85 }}>作成済み書類</div>
+          <div style={{ fontSize: '13px', color: '#9e9e9e' }}>作成済み書類</div>
         </div>
 
-        <div style={{ background: '#3d5266', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', border: '1px solid #e0e0e0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>仕入先</div>
-              <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalSuppliers}</div>
+              <div style={{ fontSize: '14px', color: '#757575', marginBottom: '8px' }}>仕入先</div>
+              <div style={{ fontSize: '32px', fontWeight: '700', color: '#212121' }}>{stats.totalSuppliers}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
-              <Package size={28} />
+            <div style={{ background: '#f5f5f5', padding: '12px', borderRadius: '12px' }}>
+              <Package size={28} color="#616161" />
             </div>
           </div>
-          <div style={{ fontSize: '13px', opacity: 0.85 }}>登録済み仕入先</div>
+          <div style={{ fontSize: '13px', color: '#9e9e9e' }}>登録済み仕入先</div>
         </div>
 
-        <div style={{ background: '#465a6d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', border: '1px solid #e0e0e0' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
-              <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>発注書</div>
-              <div style={{ fontSize: '32px', fontWeight: '700' }}>{stats.totalPurchaseOrders}</div>
+              <div style={{ fontSize: '14px', color: '#757575', marginBottom: '8px' }}>発注書</div>
+              <div style={{ fontSize: '32px', fontWeight: '700', color: '#212121' }}>{stats.totalPurchaseOrders}</div>
             </div>
-            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '12px', borderRadius: '12px' }}>
-              <ShoppingCart size={28} />
+            <div style={{ background: '#f5f5f5', padding: '12px', borderRadius: '12px' }}>
+              <ShoppingCart size={28} color="#616161" />
             </div>
           </div>
-          <div style={{ fontSize: '13px', opacity: 0.85 }}>作成済み発注</div>
+          <div style={{ fontSize: '13px', color: '#9e9e9e' }}>作成済み発注</div>
         </div>
       </div>
 
@@ -131,12 +131,12 @@ export default function Dashboard() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#3498db', padding: '10px', borderRadius: '10px', color: 'white' }}>
-              <TrendingUp size={24} />
+            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
+              <TrendingUp size={24} color="#2196f3" />
             </div>
             <div>
               <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>今月の売上</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: '#667eea' }}>
+              <div style={{ fontSize: '26px', fontWeight: '700', color: '#2196f3' }}>
                 ¥{stats.monthlyRevenue.toLocaleString()}
               </div>
             </div>
@@ -145,12 +145,12 @@ export default function Dashboard() {
 
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#e74c3c', padding: '10px', borderRadius: '10px', color: 'white' }}>
-              <DollarSign size={24} />
+            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
+              <DollarSign size={24} color="#f44336" />
             </div>
             <div>
               <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>今月の支出</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: '#f5576c' }}>
+              <div style={{ fontSize: '26px', fontWeight: '700', color: '#f44336' }}>
                 ¥{stats.monthlyExpenses.toLocaleString()}
               </div>
             </div>
@@ -159,12 +159,12 @@ export default function Dashboard() {
 
         <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#27ae60', padding: '10px', borderRadius: '10px', color: 'white' }}>
-              <BarChart3 size={24} />
+            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
+              <BarChart3 size={24} color="#4caf50" />
             </div>
             <div>
               <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>純利益</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: stats.monthlyRevenue - stats.monthlyExpenses >= 0 ? '#43e97b' : '#f5576c' }}>
+              <div style={{ fontSize: '26px', fontWeight: '700', color: stats.monthlyRevenue - stats.monthlyExpenses >= 0 ? '#4caf50' : '#f44336' }}>
                 ¥{(stats.monthlyRevenue - stats.monthlyExpenses).toLocaleString()}
               </div>
             </div>
