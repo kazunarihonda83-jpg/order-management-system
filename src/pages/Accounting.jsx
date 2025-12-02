@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calculator, Plus, Download, Filter, X, Calendar, Trash2, TrendingUp, TrendingDown, DollarSign, PieChart } from 'lucide-react';
+import { Calculator, Plus, Download, Filter, X, Calendar, Trash2, TrendingUp, TrendingDown, PieChart } from 'lucide-react';
 import api from '../utils/api';
 
 export default function Accounting() {

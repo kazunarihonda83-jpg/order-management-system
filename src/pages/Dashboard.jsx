@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BarChart3, Users, FileText, ShoppingCart, TrendingUp, DollarSign, Package, AlertCircle } from 'lucide-react';
+import { BarChart3, Users, FileText, ShoppingCart, TrendingUp, TrendingDown, Package, AlertCircle } from 'lucide-react';
 import api from '../utils/api';
 
 export default function Dashboard() {
@@ -129,42 +129,42 @@ export default function Dashboard() {
 
       {/* 今月の収支 */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.12)', border: '1px solid #e8e8e8' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
-              <TrendingUp size={24} color="#2196f3" />
+            <div style={{ background: '#e3f2fd', padding: '12px', borderRadius: '8px', border: '1px solid #bbdefb' }}>
+              <TrendingUp size={22} color="#1976d2" strokeWidth={2.5} />
             </div>
             <div>
-              <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>今月の売上</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: '#2196f3' }}>
+              <div style={{ fontSize: '12px', color: '#666666', marginBottom: '6px', fontWeight: '500', letterSpacing: '0.3px' }}>今月の売上</div>
+              <div style={{ fontSize: '26px', fontWeight: '600', color: '#1976d2' }}>
                 ¥{stats.monthlyRevenue.toLocaleString()}
               </div>
             </div>
           </div>
         </div>
 
-        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.12)', border: '1px solid #e8e8e8' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
-              <DollarSign size={24} color="#f44336" />
+            <div style={{ background: '#ffebee', padding: '12px', borderRadius: '8px', border: '1px solid #ffcdd2' }}>
+              <TrendingDown size={22} color="#d32f2f" strokeWidth={2.5} />
             </div>
             <div>
-              <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>今月の支出</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: '#f44336' }}>
+              <div style={{ fontSize: '12px', color: '#666666', marginBottom: '6px', fontWeight: '500', letterSpacing: '0.3px' }}>今月の支出</div>
+              <div style={{ fontSize: '26px', fontWeight: '600', color: '#d32f2f' }}>
                 ¥{stats.monthlyExpenses.toLocaleString()}
               </div>
             </div>
           </div>
         </div>
 
-        <div style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+        <div style={{ background: 'white', padding: '25px', borderRadius: '8px', boxShadow: '0 1px 3px rgba(0,0,0,0.12)', border: '1px solid #e8e8e8' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-            <div style={{ background: '#f5f5f5', padding: '10px', borderRadius: '10px' }}>
-              <BarChart3 size={24} color="#4caf50" />
+            <div style={{ background: '#e8f5e9', padding: '12px', borderRadius: '8px', border: '1px solid #c8e6c9' }}>
+              <BarChart3 size={22} color="#388e3c" strokeWidth={2.5} />
             </div>
             <div>
-              <div style={{ fontSize: '13px', color: '#666', marginBottom: '4px' }}>純利益</div>
-              <div style={{ fontSize: '26px', fontWeight: '700', color: stats.monthlyRevenue - stats.monthlyExpenses >= 0 ? '#4caf50' : '#f44336' }}>
+              <div style={{ fontSize: '12px', color: '#666666', marginBottom: '6px', fontWeight: '500', letterSpacing: '0.3px' }}>純利益</div>
+              <div style={{ fontSize: '26px', fontWeight: '600', color: stats.monthlyRevenue - stats.monthlyExpenses >= 0 ? '#388e3c' : '#d32f2f' }}>
                 ¥{(stats.monthlyRevenue - stats.monthlyExpenses).toLocaleString()}
               </div>
             </div>
