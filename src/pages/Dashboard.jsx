@@ -100,7 +100,7 @@ export default function Dashboard() {
           <div style={{ fontSize: '13px', opacity: 0.85 }}>作成済み書類</div>
         </div>
 
-        <div style={{ background: '#5a6c7d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#3d5266', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>仕入先</div>
@@ -113,7 +113,7 @@ export default function Dashboard() {
           <div style={{ fontSize: '13px', opacity: 0.85 }}>登録済み仕入先</div>
         </div>
 
-        <div style={{ background: '#7f8c8d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
+        <div style={{ background: '#465a6d', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', color: 'white' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '15px' }}>
             <div>
               <div style={{ fontSize: '14px', opacity: 0.9, marginBottom: '8px' }}>発注書</div>
