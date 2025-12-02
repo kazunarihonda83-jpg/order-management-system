@@ -3,10 +3,40 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "rewrites": [
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth.js"
+    },
+    {
+      "src": "/api/customers/(.*)",
+      "dest": "/api/customers.js"
+    },
+    {
+      "src": "/api/documents/(.*)",
+      "dest": "/api/documents.js"
+    },
+    {
+      "src": "/api/suppliers/(.*)",
+      "dest": "/api/suppliers.js"
+    },
+    {
+      "src": "/api/purchases/(.*)",
+      "dest": "/api/purchases.js"
+    },
+    {
+      "src": "/api/accounting/(.*)",
+      "dest": "/api/accounting.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
