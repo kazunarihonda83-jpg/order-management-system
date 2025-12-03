@@ -235,5 +235,62 @@ export function initDatabase() {
     console.log('Default accounts created successfully');
   }
 
+  // Create default suppliers if they don't exist
+  const suppliersCount = db.prepare('SELECT COUNT(*) as count FROM suppliers').get();
+  if (suppliersCount.count === 0) {
+    console.log('Creating default suppliers...');
+    const defaultSuppliers = [
+      {
+        supplier_type: '食品',
+        name: '中延園食品',
+        postal_code: '224-0057',
+        address: '神奈川県横浜市都筑区川和町303',
+        phone: '0459342391',
+        email: '',
+        payment_terms: 30,
+        notes: '銀行：三井住友銀行 荏原支店 普通 0868811 カ）ナカノブエンショクヒン'
+      },
+      {
+        supplier_type: '製麺',
+        name: '菅野製麺所',
+        postal_code: '252-0239',
+        address: '神奈川県相模原市中央区中央２丁目５−１１',
+        phone: '0428513724',
+        email: '',
+        payment_terms: 30,
+        notes: '神奈川営業所 銀行：相模原市農業協同組合 中央支店 普通 0037150 カブシキガイシヤ カンノセイメンジョ カナガワエイギョウショ ダ'
+      },
+      {
+        supplier_type: '卸売',
+        name: '東京ジョーカー',
+        postal_code: '103-0027',
+        address: '東京都中央区日本橋3-2-14日本橋KNビル4F',
+        phone: '0352013643',
+        email: '',
+        payment_terms: 30,
+        notes: '銀行：三菱UFJ銀行 秋葉原支店 普通 4511782 トウキョウジョーカー （カ'
+      }
+    ];
+
+    const supplierStmt = db.prepare(`
+      INSERT INTO suppliers (supplier_type, name, postal_code, address, phone, email, payment_terms, notes)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+    
+    for (const supplier of defaultSuppliers) {
+      supplierStmt.run(
+        supplier.supplier_type,
+        supplier.name,
+        supplier.postal_code,
+        supplier.address,
+        supplier.phone,
+        supplier.email,
+        supplier.payment_terms,
+        supplier.notes
+      );
+    }
+    console.log('Default suppliers created successfully');
+  }
+
   return db;
 }
