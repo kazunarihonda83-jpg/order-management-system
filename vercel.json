@@ -1,42 +1,35 @@
 {
-  "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/auth/(.*)",
-      "dest": "/api/auth.js"
+      "source": "/api/auth/:path*",
+      "destination": "/api/auth"
     },
     {
-      "src": "/api/customers/(.*)",
-      "dest": "/api/customers.js"
+      "source": "/api/customers/:path*",
+      "destination": "/api/customers"
     },
     {
-      "src": "/api/documents/(.*)",
-      "dest": "/api/documents.js"
+      "source": "/api/documents/:path*",
+      "destination": "/api/documents"
     },
     {
-      "src": "/api/suppliers/(.*)",
-      "dest": "/api/suppliers.js"
+      "source": "/api/suppliers/:path*",
+      "destination": "/api/suppliers"
     },
     {
-      "src": "/api/purchases/(.*)",
-      "dest": "/api/purchases.js"
+      "source": "/api/purchases/:path*",
+      "destination": "/api/purchases"
     },
     {
-      "src": "/api/accounting/(.*)",
-      "dest": "/api/accounting.js"
+      "source": "/api/accounting/:path*",
+      "destination": "/api/accounting"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
