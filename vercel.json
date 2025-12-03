@@ -1,35 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
   "rewrites": [
     {
-      "source": "/api/auth/:path*",
-      "destination": "/api/auth"
-    },
-    {
-      "source": "/api/customers/:path*",
-      "destination": "/api/customers"
-    },
-    {
-      "source": "/api/documents/:path*",
-      "destination": "/api/documents"
-    },
-    {
-      "source": "/api/suppliers/:path*",
-      "destination": "/api/suppliers"
-    },
-    {
-      "source": "/api/purchases/:path*",
-      "destination": "/api/purchases"
-    },
-    {
-      "source": "/api/accounting/:path*",
-      "destination": "/api/accounting"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/api/:path*",
+      "destination": "/api/index"
     }
   ]
 }

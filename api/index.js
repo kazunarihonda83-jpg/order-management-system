@@ -1,7 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 // Import routes
 import authRoutes from '../server/routes/auth.js';
@@ -10,9 +8,6 @@ import documentRoutes from '../server/routes/documents.js';
 import supplierRoutes from '../server/routes/suppliers.js';
 import purchaseRoutes from '../server/routes/purchases.js';
 import accountingRoutes from '../server/routes/accounting.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -39,4 +34,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-export default app;
+// Vercel serverless function handler
+export default (req, res) => {
+  return app(req, res);
+};
