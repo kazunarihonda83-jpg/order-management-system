@@ -15,13 +15,50 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   try {
-    const { name, postal_code, address, phone, email, payment_terms, notes } = req.body;
-    const result = db.prepare(`INSERT INTO suppliers (name, postal_code, address, phone, email, payment_terms, notes) 
-      VALUES (?, ?, ?, ?, ?, ?, ?)`).run(name, postal_code, address, phone, email, payment_terms || 30, notes);
+    const { 
+      supplier_type, name, postal_code, address, phone, email, payment_terms,
+      bank_name, branch_name, account_type, account_number, account_holder, notes 
+    } = req.body;
+    const result = db.prepare(`
+      INSERT INTO suppliers (
+        supplier_type, name, postal_code, address, phone, email, payment_terms,
+        bank_name, branch_name, account_type, account_number, account_holder, notes
+      ) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `).run(
+      supplier_type, name, postal_code, address, phone, email, payment_terms || 30,
+      bank_name, branch_name, account_type, account_number, account_holder, notes
+    );
     const supplier = db.prepare('SELECT * FROM suppliers WHERE id = ?').get(result.lastInsertRowid);
     res.status(201).json(supplier);
   } catch (error) {
+    console.error('Failed to create supplier:', error);
     res.status(500).json({ error: 'Failed to create supplier' });
+  }
+});
+
+router.put('/:id', (req, res) => {
+  try {
+    const { 
+      supplier_type, name, postal_code, address, phone, email, payment_terms,
+      bank_name, branch_name, account_type, account_number, account_holder, notes 
+    } = req.body;
+    db.prepare(`
+      UPDATE suppliers SET 
+        supplier_type = ?, name = ?, postal_code = ?, address = ?, phone = ?, email = ?, payment_terms = ?,
+        bank_name = ?, branch_name = ?, account_type = ?, account_number = ?, account_holder = ?,
+        notes = ?, updated_at = CURRENT_TIMESTAMP
+      WHERE id = ?
+    `).run(
+      supplier_type, name, postal_code, address, phone, email, payment_terms || 30,
+      bank_name, branch_name, account_type, account_number, account_holder,
+      notes, req.params.id
+    );
+    const supplier = db.prepare('SELECT * FROM suppliers WHERE id = ?').get(req.params.id);
+    res.json(supplier);
+  } catch (error) {
+    console.error('Failed to update supplier:', error);
+    res.status(500).json({ error: 'Failed to update supplier' });
   }
 });
 

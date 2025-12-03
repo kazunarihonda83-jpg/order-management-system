@@ -118,6 +118,11 @@ export function initDatabase() {
       phone TEXT,
       email TEXT,
       payment_terms INTEGER DEFAULT 30,
+      bank_name TEXT,
+      branch_name TEXT,
+      account_type TEXT,
+      account_number TEXT,
+      account_holder TEXT,
       notes TEXT,
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
       updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -248,7 +253,12 @@ export function initDatabase() {
         phone: '0459342391',
         email: '',
         payment_terms: 30,
-        notes: '銀行：三井住友銀行 荏原支店 普通 0868811 カ）ナカノブエンショクヒン'
+        bank_name: '三井住友銀行',
+        branch_name: '荏原支店',
+        account_type: '普通',
+        account_number: '0868811',
+        account_holder: 'カ）ナカノブエンショクヒン',
+        notes: ''
       },
       {
         supplier_type: '製麺',
@@ -258,7 +268,12 @@ export function initDatabase() {
         phone: '0428513724',
         email: '',
         payment_terms: 30,
-        notes: '神奈川営業所 銀行：相模原市農業協同組合 中央支店 普通 0037150 カブシキガイシヤ カンノセイメンジョ カナガワエイギョウショ ダ'
+        bank_name: '相模原市農業協同組合',
+        branch_name: '中央支店',
+        account_type: '普通',
+        account_number: '0037150',
+        account_holder: 'カブシキガイシヤ カンノセイメンジョ カナガワエイギョウショ ダ',
+        notes: '神奈川営業所'
       },
       {
         supplier_type: '卸売',
@@ -268,13 +283,21 @@ export function initDatabase() {
         phone: '0352013643',
         email: '',
         payment_terms: 30,
-        notes: '銀行：三菱UFJ銀行 秋葉原支店 普通 4511782 トウキョウジョーカー （カ'
+        bank_name: '三菱UFJ銀行',
+        branch_name: '秋葉原支店',
+        account_type: '普通',
+        account_number: '4511782',
+        account_holder: 'トウキョウジョーカー （カ',
+        notes: ''
       }
     ];
 
     const supplierStmt = db.prepare(`
-      INSERT INTO suppliers (supplier_type, name, postal_code, address, phone, email, payment_terms, notes)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO suppliers (
+        supplier_type, name, postal_code, address, phone, email, payment_terms,
+        bank_name, branch_name, account_type, account_number, account_holder, notes
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
     
     for (const supplier of defaultSuppliers) {
@@ -286,6 +309,11 @@ export function initDatabase() {
         supplier.phone,
         supplier.email,
         supplier.payment_terms,
+        supplier.bank_name,
+        supplier.branch_name,
+        supplier.account_type,
+        supplier.account_number,
+        supplier.account_holder,
         supplier.notes
       );
     }
