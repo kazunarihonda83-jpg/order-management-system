@@ -32,15 +32,15 @@ export function initDatabase() {
   `);
 
   // Check if admin user exists
-  const adminExists = db.prepare('SELECT COUNT(*) as count FROM administrators WHERE username = ?').get('admin');
+  const adminExists = db.prepare('SELECT COUNT(*) as count FROM administrators WHERE username = ?').get('東京ぶたくらぶ');
   
   if (adminExists.count === 0) {
     console.log('Creating default admin user...');
     const hashedPassword = bcrypt.hashSync('admin123', 10);
     db.prepare('INSERT INTO administrators (username, password, email, permissions) VALUES (?, ?, ?, ?)').run(
-      'admin',
+      '東京ぶたくらぶ',
       hashedPassword,
-      'admin@example.com',
+      'info@tokyobutaclub.com',
       'all'
     );
     console.log('Default admin user created successfully');
@@ -318,6 +318,128 @@ export function initDatabase() {
       );
     }
     console.log('Default suppliers created successfully');
+  }
+
+  // Create default purchase orders if they don't exist
+  const purchaseOrdersCount = db.prepare('SELECT COUNT(*) as count FROM purchase_orders').get();
+  if (purchaseOrdersCount.count === 0) {
+    console.log('Creating default purchase orders...');
+    
+    // Get supplier IDs
+    const nakanobuen = db.prepare('SELECT id FROM suppliers WHERE name = ?').get('中延園食品');
+    const kanno = db.prepare('SELECT id FROM suppliers WHERE name = ?').get('菅野製麺所');
+    const joker = db.prepare('SELECT id FROM suppliers WHERE name = ?').get('東京ジョーカー');
+    
+    // Get admin user ID
+    const admin = db.prepare('SELECT id FROM administrators WHERE username = ?').get('東京ぶたくらぶ');
+    
+    if (nakanobuen && kanno && joker && admin) {
+      const defaultOrders = [
+        {
+          order_number: 'PO-2024-001',
+          supplier_id: nakanobuen.id,
+          order_date: '2024-12-01',
+          expected_delivery_date: '2024-12-03',
+          status: 'delivered',
+          created_by: admin.id,
+          items: [
+            { item_name: 'チャーシュー用豚バラ肉', description: '1kg×10パック', quantity: 10, unit_price: 2500, tax_rate: 10.0 },
+            { item_name: 'もやし', description: '200g×30袋', quantity: 30, unit_price: 80, tax_rate: 10.0 },
+            { item_name: 'ネギ', description: '1束×5', quantity: 5, unit_price: 200, tax_rate: 10.0 }
+          ]
+        },
+        {
+          order_number: 'PO-2024-002',
+          supplier_id: kanno.id,
+          order_date: '2024-12-01',
+          expected_delivery_date: '2024-12-02',
+          status: 'delivered',
+          created_by: admin.id,
+          items: [
+            { item_name: '中太麺', description: '生麺 1kg×20袋', quantity: 20, unit_price: 450, tax_rate: 10.0 },
+            { item_name: '細麺', description: '生麺 1kg×10袋', quantity: 10, unit_price: 450, tax_rate: 10.0 }
+          ]
+        },
+        {
+          order_number: 'PO-2024-003',
+          supplier_id: joker.id,
+          order_date: '2024-12-02',
+          expected_delivery_date: '2024-12-05',
+          status: 'ordered',
+          created_by: admin.id,
+          items: [
+            { item_name: 'ラーメンスープ（豚骨醤油）', description: '業務用 5L×2個', quantity: 2, unit_price: 3800, tax_rate: 10.0 },
+            { item_name: '煮卵', description: '味付け済み 50個入り', quantity: 1, unit_price: 2500, tax_rate: 10.0 },
+            { item_name: 'メンマ', description: '業務用 1kg', quantity: 2, unit_price: 1200, tax_rate: 10.0 }
+          ]
+        },
+        {
+          order_number: 'PO-2024-004',
+          supplier_id: nakanobuen.id,
+          order_date: '2024-12-03',
+          expected_delivery_date: '2024-12-05',
+          status: 'ordered',
+          created_by: admin.id,
+          items: [
+            { item_name: 'キャベツ', description: '1玉×10', quantity: 10, unit_price: 180, tax_rate: 10.0 },
+            { item_name: '白菜', description: '1/4カット×20', quantity: 20, unit_price: 120, tax_rate: 10.0 },
+            { item_name: 'ニンニク', description: '1kg', quantity: 2, unit_price: 800, tax_rate: 10.0 }
+          ]
+        }
+      ];
+
+      for (const order of defaultOrders) {
+        // Calculate totals
+        let subtotal = 0;
+        for (const item of order.items) {
+          subtotal += item.quantity * item.unit_price;
+        }
+        const tax_amount = Math.round(subtotal * 0.1);
+        const total_amount = subtotal + tax_amount;
+
+        // Insert purchase order
+        const result = db.prepare(`
+          INSERT INTO purchase_orders (
+            order_number, supplier_id, order_date, expected_delivery_date, 
+            status, subtotal, tax_amount, total_amount, created_by
+          )
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).run(
+          order.order_number,
+          order.supplier_id,
+          order.order_date,
+          order.expected_delivery_date,
+          order.status,
+          subtotal,
+          tax_amount,
+          total_amount,
+          order.created_by
+        );
+
+        // Insert order items
+        const itemStmt = db.prepare(`
+          INSERT INTO purchase_order_items (
+            purchase_order_id, item_name, description, quantity, unit_price, tax_rate, amount
+          )
+          VALUES (?, ?, ?, ?, ?, ?, ?)
+        `);
+
+        for (const item of order.items) {
+          const amount = item.quantity * item.unit_price;
+          itemStmt.run(
+            result.lastInsertRowid,
+            item.item_name,
+            item.description,
+            item.quantity,
+            item.unit_price,
+            item.tax_rate,
+            amount
+          );
+        }
+      }
+      
+      console.log('Default purchase orders created successfully');
+    }
   }
 
   return db;

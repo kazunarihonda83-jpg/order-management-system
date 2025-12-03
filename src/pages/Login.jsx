@@ -38,7 +38,7 @@ export default function Login() {
           <button type="submit" style={{width:'100%',padding:'12px',background:'#1890ff',color:'white',
             border:'none',borderRadius:'4px',cursor:'pointer',fontSize:'16px'}}>ログイン</button>
           <div style={{marginTop:'20px',textAlign:'center',color:'#666',fontSize:'14px'}}>
-            デフォルト: admin / admin123
+            デフォルト: 東京ぶたくらぶ / admin123
           </div>
         </form>
       </div>
